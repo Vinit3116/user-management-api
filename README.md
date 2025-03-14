@@ -158,16 +158,12 @@ The API includes proper error handling:
 
 ### Security Considerations
 
-Environment Variables:
-Sensitive data like database connection strings are stored in .env (not pushed to GitHub).
+**Environment Variables**: Sensitive data like database connection strings are stored in `.env` (not pushed to GitHub).  
 
-Validation:
-All input is validated to prevent injection attacks.
+**Input Validation**: Basic validation is implemented (e.g., email format check, required fields). However, additional validation (e.g., stronger sanitization, input length limits) can be added for better 
+security.  
 
-Error Handling:
-API responses do not expose internal errors.
-Rate Limiting & CORS (For Deployment):
-Can be added to prevent API abuse.
+**Error Handling**: API responses include structured error messages and do not expose internal stack traces. 
 
 **Testing with Postman**
 
